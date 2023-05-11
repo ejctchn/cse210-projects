@@ -7,7 +7,7 @@ using System.Collections.Generic;
     1 - I added a word count and character count for each entry.
     2 - I added the ability for the program to understand that a 
         trailing space does not count as an extra word. 
-    3 - I also added logic to ensure that if someone added a space 
+    3 - I added logic to ensure that if someone added a space 
         before a !, ?, or period, that it wouldn't count that as
         another word.
 
