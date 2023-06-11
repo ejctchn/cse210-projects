@@ -49,6 +49,8 @@ class Prompt
                 break;
             //list prompts
             case 3:
+                rand_num = rnd.Next(list_prompts.Length);
+                rand_prompt = list_prompts[rand_num];
                 break;
             //error handling
             default:

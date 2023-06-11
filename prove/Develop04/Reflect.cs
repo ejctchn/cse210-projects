@@ -1,9 +1,14 @@
-class Reflect
+class Reflect : Activity
 {
+    private bool keep_going;
+    public Reflect(bool _keep_going) : base(_keep_going)
+    {
+        keep_going = _keep_going;
+    }
     Sleep sleep = new Sleep();
     Prompt prompt = new Prompt();
     int duration;
-    bool keep_going = true;
+    //bool keep_going = true;
     int counter;
     public void ReflectionActivity()
     {

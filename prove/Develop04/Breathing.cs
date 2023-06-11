@@ -1,7 +1,12 @@
-class Breathing
+class Breathing : Activity
 {
+    private bool keep_going;
+    public Breathing(bool _keep_going) : base(_keep_going)
+    {
+        keep_going = _keep_going;
+    }
     Sleep sleep = new Sleep();
-    bool keep_going = true;
+    //bool keep_going = true;
     int duration;
     public void BreathingActivity()
     {
