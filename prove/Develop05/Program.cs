@@ -7,9 +7,11 @@ class Program
         bool continue_program = true;
         int total_points = 0;
         List<string> goals_list = new List<string>();
+        List<string> to_be_saved = new List<string>();
 
         Menu menu = new Menu();
         SimpleGoal simple = new SimpleGoal();
+        DisplayGoals displaygoals = new DisplayGoals();
 
         while(continue_program)
         {
@@ -54,7 +56,7 @@ class Program
                     }
                     break;
                 case 2:
-                    Console.WriteLine(goals_list);
+                    displaygoals.displayGoals(goals_list);
                     break;
                 case 3:
                     Console.WriteLine("You chose 3");

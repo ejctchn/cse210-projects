@@ -7,7 +7,7 @@ public class Menu
         bool int_entered = false;
         while(!int_entered)
         {
-            Console.WriteLine("Menu Options: ");
+            Console.WriteLine("\nMenu Options: ");
             Console.WriteLine("\t1. Create New Goal");
             Console.WriteLine("\t2. List Goals");
             Console.WriteLine("\t3. Save Goals");

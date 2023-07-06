@@ -1,10 +1,11 @@
 public class SimpleGoal : Goal
 {
-    string goal_type;
+    int goal_type = 1;
+    int completed;
+    string output;
     string goal_name;
     string goal_desc;
     int goal_points;
-    string output;
     bool int_entered = false;
 
     // public SimpleGoal(string _goal_type, string _goal_name, string _goal_desc, int _goal_points)
@@ -33,7 +34,7 @@ public class SimpleGoal : Goal
                 Console.WriteLine("\nPlease only enter integers");
             }
         }
-        output = $"{goal_type}+{goal_name}+{goal_desc}+{goal_points}";
+        output = $"{goal_type}+{completed}+{goal_name}+{goal_desc}+{goal_points}";
         return output;
     }
 }
