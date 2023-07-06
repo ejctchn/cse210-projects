@@ -1,10 +1,10 @@
 public class Comments
 {
-    List<string> all_comments = new List<string>();
-    List<string> all_authors = new List<string>();
-    Random rnd = new Random();
-    string text;
-    string comment_author;
+    private List<string> all_comments = new List<string>();
+    private List<string> all_authors = new List<string>();
+    private Random rnd = new Random();
+    private string text;
+    private string comment_author;
 
     public Comments()
     {
@@ -28,13 +28,16 @@ public class Comments
     }
     public string makeComment()
     {
+        //get random comment author
         int rand_num = rnd.Next(all_authors.Count);
         comment_author = all_authors[rand_num];
 
+        //get random comment
         rand_num = rnd.Next(all_comments.Count);
         text = all_comments[rand_num];
 
-        string final_comment = $"{comment_author}~{text}";
+        //put it all together and whaddya get?
+        string final_comment = $"{comment_author}: {text}";
 
         return final_comment;
     }
