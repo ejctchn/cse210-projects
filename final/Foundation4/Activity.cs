@@ -1,28 +1,45 @@
 public class Activity
 {
-    private string date;
-    private int length;
+    protected string date;
+    protected double length;
+    
+    protected string type;
 
-    public Activity(string _date, int _length)
+    public Activity(string _date, double _length)
     {
         date = _date;
         length = _length;
+        type = "";
     }
 
-    public virtual int getDistance()
+    public virtual double getDistance()
     {
-        return length;
+        return (getSpeed() * length) / 60;
     }
-    public virtual int getSpeed()
+    public virtual double getSpeed()
     {
-        return (distance / minutes) * 60;
+        try
+        { 
+            return (getDistance() / length) * 60;
+        }
+        catch
+        {
+            return 60 / getPace();
+        }
     }
-    public virtual int getPace()
+    public virtual double getPace()
     {
-        return 60 / speed;
+        try
+        {
+            return length / getDistance();
+        }
+        catch
+        {
+            return 60 / getSpeed();
+        }
     }
     public virtual string getSummary()
     {
-        return $"{date} {type} ({length}) - Distance: {distance} miles, Speed: {speed} mph, Pace: {pace} min per mile";
+        return $"{date} {type} ({length} min) - Distance: {Math.Round(getDistance(), 1)} miles, Speed: {Math.Round(getSpeed(), 1)} mph, Pace: {Math.Round(getPace(), 1)} min per mile";
     }
 }
