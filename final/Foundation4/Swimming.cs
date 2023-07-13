@@ -1,14 +1,12 @@
 public class Swimming : Activity
 {
     private double num_of_laps;
-    //private double lap_miles;
 
     public Swimming(string _date, double _length, double _num_of_laps) : base(_date, _length)
     {
         date = _date;
         length = _length;
         num_of_laps = _num_of_laps;
-        //lap_miles = (num_of_laps * 50) / 1609.34;
         type = "Swimming";
     }
 
